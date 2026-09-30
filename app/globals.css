@@ -28,12 +28,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -70,8 +72,31 @@ h4 {
   pointer-events: none;
 }
 
+@keyframes hero-marquee-ltr {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-marquee {
+  animation: hero-marquee-ltr 48s linear infinite;
+  will-change: transform;
+}
+
+.hero-marquee:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .hero-marquee {
+    animation: none;
+    transform: none;
   }
 }

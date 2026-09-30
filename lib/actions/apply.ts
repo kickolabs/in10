@@ -46,7 +46,7 @@ export async function submitApplication(_prev: FormState, formData: FormData): P
   if (!admin) {
     return {
       status: "error",
-      message: `Applications are not connected yet. Email ${site.email} and we will take your details directly.`,
+      message: `Please email ${site.email} and we will take your details directly.`,
     };
   }
 

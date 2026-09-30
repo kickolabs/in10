@@ -110,18 +110,20 @@ export function HomePage() {
           <div>
             <SectionHeading
               eyebrow="Language support"
-              title="Prepare the language a program may ask for."
-              text="International opportunities may require language proficiency depending on the destination and program. Lord of Languages provides that preparation. Language requirements vary depending on the destination, program and institution."
+              title="Language & Test Preparation."
+              text="International opportunities may require language proficiency or an English test, depending on the destination and program. Lord of Languages provides that preparation. Requirements vary by destination, program and institution."
             />
             <Button className="mt-8" asChild>
               <Link href="/lord-of-languages">Explore Language Training</Link>
             </Button>
           </div>
           <ul className="grid gap-3">
-            {languagePrograms.slice(0, 4).map((item) => (
-              <li key={item.name} className="rounded-2xl border border-line bg-background px-5 py-4">
-                <p className="font-semibold text-navy">{item.name}</p>
-                <p className="mt-1 text-sm text-muted">{item.text}</p>
+            {languagePrograms.map((item) => (
+              <li key={item.slug}>
+                <Link href={`/lord-of-languages#${item.slug}`} className="block rounded-2xl border border-line bg-background px-5 py-4 transition hover:border-brand-blue/30">
+                  <p className="font-semibold text-navy">{item.name}</p>
+                  <p className="mt-1 text-sm text-muted">{item.text}</p>
+                </Link>
               </li>
             ))}
           </ul>
@@ -132,7 +134,7 @@ export function HomePage() {
         <article className="rounded-[2rem] border border-line bg-white p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple">Flagship</p>
           <h2 className="mt-3 text-3xl font-bold text-navy">Lord of Languages</h2>
-          <p className="mt-3 text-sm leading-6 text-muted">German, English, IELTS preparation and destination-specific language training for candidates who need it.</p>
+          <p className="mt-3 text-sm leading-6 text-muted">German language training plus IELTS, TOEFL, OET, PET, PTE and additional language and test-preparation programs.</p>
           <Button className="mt-6" variant="outline" asChild>
             <Link href="/lord-of-languages">Explore Language Training</Link>
           </Button>
@@ -140,7 +142,7 @@ export function HomePage() {
         <article className="rounded-[2rem] border border-line bg-white p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-orange">Flagship</p>
           <h2 className="mt-3 text-3xl font-bold text-navy">Fly Maverick</h2>
-          <p className="mt-3 text-sm leading-6 text-muted">Flight tickets, hotel and room booking, tour packages and travel assistance. Not a visa service.</p>
+          <p className="mt-3 text-sm leading-6 text-muted">Fly Maverick supports your travel arrangements with flight bookings, hotel reservations and selected travel services.</p>
           <Button className="mt-6" variant="outline" asChild>
             <Link href="/fly-maverick">Explore Travel Services</Link>
           </Button>

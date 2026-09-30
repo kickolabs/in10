@@ -18,7 +18,7 @@ export default async function InternshipsPage() {
       <PageHero
         eyebrow="Internships"
         title="Current internship directions."
-        text="These cards are a working catalogue that can grow from Supabase."
+        text="Browse current internship directions in hospitality, healthcare, tourism, international business and other professional sectors. Availability varies by destination and eligibility."
       />
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <InternshipExplorer listings={listings} />

@@ -22,7 +22,7 @@ const sections = [
   },
   {
     title: "Our vision",
-    text: "A technology-enabled way for candidates to see global training pathways without treating every destination as identical.",
+    text: "A clear way for candidates to see global training pathways without treating every destination as identical.",
   },
   {
     title: "Our approach",

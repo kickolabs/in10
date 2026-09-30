@@ -25,16 +25,28 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/internships", label: "Internships" },
-  { href: "/destinations", label: "Destinations" },
-  { href: "/industries", label: "Industries" },
 ] as const;
 
 export const flagshipLinks = [
-  { href: "/lord-of-languages", label: "Lord of Languages", detail: "Language training" },
+  { href: "/lord-of-languages", label: "Lord of Languages", detail: "Language & Test Preparation" },
   { href: "/fly-maverick", label: "Fly Maverick", detail: "Travel services" },
 ] as const;
 
-export const secondaryLinks = [
+export const secondaryLinks = [{ href: "/contact", label: "Contact" }] as const;
+
+export const footerQuickLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/internships", label: "Internships" },
+  { href: "/destinations", label: "Destinations" },
+  { href: "/industries", label: "Industries" },
   { href: "/how-it-works", label: "How It Works" },
+  { href: "/apply", label: "Apply" },
   { href: "/contact", label: "Contact" },
+] as const;
+
+export const footerSocials = [
+  { label: "Instagram", href: site.socials[0].href },
+  { label: "Facebook", href: site.socials[1].href },
+  { label: "LinkedIn", href: site.socials[2].href },
 ] as const;

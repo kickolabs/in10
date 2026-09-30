@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           Resumes are stored in a private file store. We do not sell personal information. Access is limited to the team operating {site.domain} and the systems that host the site.
         </p>
         <p>
-          You may ask for a correction or deletion of your application details by emailing {site.email}. Account passwords are handled by the authentication provider and are not stored in the website database.
+          You may ask for a correction or deletion of your application details by emailing {site.email}. If you create an account, your password is stored securely by the sign-in service and is not kept as readable text on this website.
         </p>
       </Prose>
     </>

@@ -179,7 +179,7 @@ export const reasons = [
   },
   {
     title: "Travel arrangements, separately",
-    text: "Fly Maverick helps with flights, stays and tours. It does not process visas.",
+    text: "Fly Maverick supports your travel arrangements with flight bookings, hotel reservations and selected travel services.",
   },
   {
     title: "Straight requirements",
@@ -189,31 +189,47 @@ export const reasons = [
 
 export const languagePrograms = [
   {
-    name: "German",
-    text: "Language preparation often relevant for Germany and selected European pathways.",
+    slug: "german",
+    name: "German Language",
+    text: "Build practical German language skills for academic and professional opportunities.",
   },
   {
-    name: "English",
-    text: "Professional and academic English for destinations where English is the working language.",
+    slug: "ielts",
+    name: "IELTS Preparation",
+    text: "Prepare for IELTS with structured training focused on your target score.",
   },
   {
-    name: "IELTS preparation",
-    text: "Exam preparation where a host or institution asks for an English test result.",
+    slug: "toefl",
+    name: "TOEFL Preparation",
+    text: "Develop the English skills required for TOEFL preparation.",
   },
   {
-    name: "Communication skills",
-    text: "Spoken confidence for interviews, workplaces and guest-facing roles.",
+    slug: "oet",
+    name: "OET Preparation",
+    text: "Prepare for healthcare-focused English language assessment.",
   },
   {
-    name: "Other languages",
-    text: "Destination-specific training when a program requires another language.",
+    slug: "pet",
+    name: "PET Preparation",
+    text: "Build practical English skills with structured preparation.",
+  },
+  {
+    slug: "pte",
+    name: "PTE Preparation",
+    text: "Prepare for PTE Academic with focused language and test strategies.",
+  },
+  {
+    slug: "others",
+    name: "Other Language Programs",
+    text: "Explore additional language and test-preparation programs.",
   },
 ] as const;
 
 export const travelServices = [
-  { name: "Flight ticket assistance", text: "Help comparing and arranging international flight tickets." },
-  { name: "Hotel booking", text: "Stay recommendations and booking support for travel plans." },
-  { name: "Room booking", text: "Room reservations aligned with travel dates and budgets." },
-  { name: "Tour packages", text: "Structured tours for leisure travel connected to your plans." },
-  { name: "Travel assistance", text: "Practical travel support before and during a trip." },
+  { name: "Flight Ticket Assistance", text: "Support comparing and arranging international flight tickets." },
+  { name: "Flight Booking", text: "Help completing flight bookings that match your travel dates and route." },
+  { name: "Hotel Booking", text: "Stay recommendations and hotel booking support for your travel plans." },
+  { name: "Room Booking", text: "Room reservations aligned with travel dates and budgets." },
+  { name: "Tour Packages", text: "Selected tour packages connected to your travel plans." },
+  { name: "Travel Assistance", text: "Practical travel support before and during a trip." },
 ] as const;

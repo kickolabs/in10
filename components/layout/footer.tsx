@@ -1,41 +1,60 @@
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/brand/logo";
-import { flagshipLinks, site } from "@/lib/site";
+import { flagshipLinks, footerQuickLinks, footerSocials, site } from "@/lib/site";
 
 const socialIcons = {
   Instagram,
   Facebook,
   LinkedIn: Linkedin,
-  YouTube: Youtube,
 } as const;
 
 export function Footer() {
-  const socials = site.socials.filter((item) => item.href);
   return (
     <footer className="mt-8 border-t border-line bg-navy text-white">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo inverted />
+          <Link href="/" aria-label="INTERN IN10 home" className="inline-flex">
+            <Logo inverted />
+          </Link>
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/75">
             An international internship platform connecting candidates with opportunities across destinations and industries.
           </p>
           <p className="mt-4 text-xs font-semibold tracking-[0.16em] text-white/90">{site.tagline}</p>
+          <div className="mt-5 flex gap-3">
+            {footerSocials.map((item) => {
+              const Icon = socialIcons[item.label];
+              const className =
+                "inline-flex size-10 items-center justify-center rounded-full border border-white/15 transition hover:scale-105 hover:bg-white/10";
+              if (item.href) {
+                return (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    aria-label={item.label}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={className}
+                  >
+                    <Icon className="size-4" />
+                  </a>
+                );
+              }
+              return (
+                <span key={item.label} aria-label={`${item.label} profile to be confirmed`} className={className}>
+                  <Icon className="size-4" />
+                </span>
+              );
+            })}
+          </div>
         </div>
         <div>
           <h2 className="text-sm font-semibold">Quick links</h2>
           <ul className="mt-4 space-y-2 text-sm text-white/75">
-            {[
-              ["/", "Home"],
-              ["/about", "About"],
-              ["/internships", "Internships"],
-              ["/destinations", "Destinations"],
-              ["/industries", "Industries"],
-              ["/how-it-works", "How It Works"],
-            ].map(([href, label]) => (
-              <li key={href}>
-                <Link href={href} className="hover:text-white">
-                  {label}
+            {footerQuickLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="hover:text-white">
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -72,23 +91,6 @@ export function Footer() {
             )}
             {site.address.length ? site.address.map((line) => <li key={line}>{line}</li>) : <li>Office location to be confirmed</li>}
           </ul>
-          {socials.length ? (
-            <div className="mt-5 flex gap-3">
-              {socials.map((item) => {
-                const Icon = socialIcons[item.label as keyof typeof socialIcons];
-                return (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    aria-label={item.label}
-                    className="inline-flex size-10 items-center justify-center rounded-full border border-white/15 hover:bg-white/10"
-                  >
-                    {Icon ? <Icon className="size-4" /> : item.label}
-                  </a>
-                );
-              })}
-            </div>
-          ) : null}
         </div>
       </div>
       <div className="border-t border-white/10">

@@ -18,7 +18,7 @@ export default function FlyMaverickPage() {
       <PageHero
         eyebrow="Fly Maverick"
         title="Travel services for the journey around your plans."
-        text="Fly Maverick arranges flights, stays and tours. It is a travel flagship, separate from internship selection, and it does not provide visa processing."
+        text="Fly Maverick supports your travel arrangements with flight bookings, hotel reservations and selected travel services."
       />
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
         <div className="relative h-80 overflow-hidden rounded-[2rem]">
@@ -27,7 +27,7 @@ export default function FlyMaverickPage() {
         <div>
           <h2 className="text-3xl font-bold text-navy">Practical travel support</h2>
           <p className="mt-4 text-sm leading-7 text-muted">
-            Use Fly Maverick when you need help booking the trip itself. Internship eligibility and travel bookings stay as separate conversations.
+            Use Fly Maverick when you need help booking the trip itself — flights, hotels, rooms, selected tours and travel assistance. Internship eligibility and travel bookings stay as separate conversations. Fly Maverick is not a visa-processing service.
           </p>
           <Button className="mt-6" asChild>
             <Link href="/contact">Explore Travel Services</Link>

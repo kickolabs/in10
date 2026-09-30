@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { createClient } from "@/lib/supabase/client";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
+import { site } from "@/lib/site";
 import { safeNextPath } from "@/lib/utils";
 
 export function AuthForm({ mode }: { mode: "login" | "signup" }) {
@@ -23,7 +24,7 @@ export function AuthForm({ mode }: { mode: "login" | "signup" }) {
     setError("");
     setMessage("");
     if (!configured) {
-      setError("Sign-in is not connected yet. Add the Supabase keys from .env.example.");
+      setError(`Sign-in is not available yet. Email ${site.email} if you need help with your account.`);
       return;
     }
     const form = new FormData(event.currentTarget);

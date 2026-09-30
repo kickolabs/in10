@@ -20,7 +20,7 @@ export async function submitContact(_prev: FormState, formData: FormData): Promi
   if (!admin) {
     return {
       status: "error",
-      message: `The contact form is not connected yet. Email ${site.email} instead.`,
+      message: `Please email ${site.email} instead.`,
     };
   }
 
