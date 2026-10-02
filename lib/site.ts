@@ -12,7 +12,7 @@ export const site = {
   phoneDisplay: "+91 89255 17562",
   phoneHref: "+91 89255 17562",
   address: ["Porur, Chennai, Tamil Nadu, India"] as string[],
-  mapQuery: "https://www.instagram.com/in10dotin?stkn=emk1YjdvamloZGpz",
+  mapQuery: "",
   socials: [
     { label: "Instagram", href: "https://www.instagram.com/in10dotin?stkn=emk1YjdvamloZGpz" },
     { label: "Facebook", href: "https://www.facebook.com/in10.in" },

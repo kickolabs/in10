@@ -41,7 +41,7 @@ export function Footer() {
                 );
               }
               return (
-                <span key={item.label} aria-label={`${item.label} profile to be confirmed`} className={className}>
+                <span key={item} aria-label={`${item} profile to be confirmed`} className={className}>
                   <Icon className="size-4" />
                 </span>
               );
