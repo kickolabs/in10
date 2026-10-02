@@ -3,21 +3,21 @@
  * Replace the empty phone, address, and social URLs here when they are confirmed.
  */
 export const site = {
-  brand: "INTERN IN10",
+  brand: "IN10",
   shortName: "IN10",
   domain: "in10.in",
   url: "https://in10.in",
   tagline: "INTERN TODAY. INSPIRE TOMORROW.",
-  email: "hello@in10.in",
-  phoneDisplay: "",
-  phoneHref: "",
-  address: [] as string[],
-  mapQuery: "",
+  email: "info@in10.in",
+  phoneDisplay: "+91 89255 17562",
+  phoneHref: "+91 89255 17562",
+  address: ["Porur, Chennai, Tamil Nadu, India"] as string[],
+  mapQuery: "https://www.instagram.com/in10dotin?stkn=emk1YjdvamloZGpz",
   socials: [
-    { label: "Instagram", href: "" },
-    { label: "Facebook", href: "" },
-    { label: "LinkedIn", href: "" },
-    { label: "YouTube", href: "" },
+    { label: "Instagram", href: "https://www.instagram.com/in10dotin?stkn=emk1YjdvamloZGpz" },
+    { label: "Facebook", href: "https://www.facebook.com/in10.in" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/company/in10.in" },
+    { label: "YouTube", href: "https://www.youtube.com/channel/UC-9-kyTWdEJ-Xbjn5Wj9yKg" },
   ],
 } as const;
 

@@ -87,9 +87,9 @@ export function Footer() {
                 </a>
               </li>
             ) : (
-              <li>Phone to be confirmed</li>
+              <li>+91 89255 17562</li>
             )}
-            {site.address.length ? site.address.map((line) => <li key={line}>{line}</li>) : <li>Office location to be confirmed</li>}
+            {site.address.length ? site.address.map((line) => <li key={line}>{line}</li>) : <li>Porur, Chennai, Tamil Nadu, India</li>}
           </ul>
         </div>
       </div>
